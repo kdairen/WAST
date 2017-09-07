@@ -1,0 +1,31 @@
+<!--pages/lib/libs/libs.wxml-->
+<view class="page">
+  <view class="top">
+    <image src="/image/title.png" style="position: absolute; left:8px; height:30px; width:134px"></image>
+    <view class="top_add" bindtap="btnAddClick">╋</view>
+  </view>
+  <scroll-view scroll-y class="section" style="height:{{windowHeight-31}}px;">
+    <view class="page_scroll_item" wx:for="{{items}}" wx:for-item="key" id="{{key}}" bindtouchstart="touchstart" bindtouchend="touchend" bindtap="itemtap" bindlongtap="longtap">
+      <view class="scroll_item_name">{{key}}</view>
+    </view>
+  </scroll-view>
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <action-sheet-item class="item" bindtap="moveUp">上移</action-sheet-item>
+    <action-sheet-item class="item" bindtap="moveDown">下移</action-sheet-item>
+    <action-sheet-item class="item" bindtap="alterTap">重命名</action-sheet-item>
+    <action-sheet-item class="item" bindtap="tapModal">删除</action-sheet-item>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+  </action-sheet>
+  <view class="alter_name" wx:if="{{alterShow}}">
+    <view class="input_name">
+      <button class="btn_name" style="border-color: #fff;" plain="true">
+        <input style="margin-top:16rpx;color:#fff" id="myInput" value="{{selectLib}}" maxlength="17" bindinput="getName" />
+      </button>
+    </view>
+    <view class="alter_btn">
+      <button class="flex-item" bindtap="alterCancel">取消</button>
+      <button class="flex-item" bindtap="alterConfirm">确定</button>
+    </view>
+  </view>
+  <modal title="删除科目" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="modalFirm" bindcancel="modalCancel">{{selectLib}}</modal>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/sub/addSub/addSub.wxml-->
+<view class="page">
+  <view class="top">
+    <view class="top_name">输入名称：</view>
+    <button class="top_input"  style="border-color: #fff;"  plain="true">
+      <input style="margin-top:4px; color:#fff" id="myInput" maxlength="17" bindinput="getName" />
+    </button>
+  </view>
+  <view class="select" style="height: 30px; width:100%;">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio value="a" checked="true" />
+      <text>单选 </text>
+      <radio value="b" />
+      <text>多选 </text>
+      <radio value="c" />
+      <text>判断</text>
+    </radio-group>
+  </view>
+  <view style="width:100%; height:1px; background-color:#ddd"></view>
+  <textarea class="show_text"wx:if="{{inputShow}}"  maxlength="200000" placeholder="选择题型→将题库复制到此处→查找" value="{{txt}}" bindinput="txtChange" placeholder-style="color:blue;" />
+  <scroll-view wx:if="{{!inputShow}}" scroll-y  style="height:{{windowHeight-140}}px;">
+    <text>{{formTxt}}</text>
+  </scroll-view>
+  <view style="width:100%; height:1px; background-color:#ddd"></view>
+  <modal title="添加题库" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="modalFirm" bindcancel="modalCancel">{{name}}</modal>
+  <view class="pageAdd_bottom">
+    <button class="flex-item" bindtap="btn1click">{{btn1Name}}</button>
+    <button class="flex-item" bindtap="btn2click">{{btn2Name}}</button>
+  </view>
+</view>

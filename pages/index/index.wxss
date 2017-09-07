@@ -1,0 +1,33 @@
+/**index.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.logoinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.logo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 150px;
+  width: 300px;
+}

@@ -1,0 +1,23 @@
+/* pages/main/result/result.wxss */
+.top{
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.top_time{
+  position: absolute;
+  top: 0px;
+  height: 30px;
+  right:4rpx
+}
+
+.btn_practice{
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+

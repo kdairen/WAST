@@ -1,0 +1,37 @@
+/* pages/main/judge/judge.wxss */
+
+.page_op{
+  width: 100%;
+  height: 75px;
+  display:flex;
+  /*flex-direction:row;*/
+}
+
+.btn_op{
+    width: 125px;
+    height: 75px;
+    color: #000;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_line{
+  width: 100%;
+  display:flex;
+  /*flex-direction:row;*/
+}
+
+.line1{
+    position: relative;
+    left: 188rpx;
+    width: 1px;
+    background-color: #000;
+}
+.line2{
+    position: relative;
+    left: 562rpx;
+    width: 1px;
+    background-color: #000;
+}

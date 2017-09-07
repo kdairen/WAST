@@ -1,0 +1,23 @@
+<!--pages/main/multiple/multiple.wxml-->
+<view class="page">
+  <scroll-view scroll-y style="height:{{titleHeight}}px;">
+    <label class="page_title">{{item[1]}}</label>
+  </scroll-view>
+  <scroll-view scroll-y style="height: {{opsHeight}}px; margin-top:8px;">
+    <button id='A' class="btn_op" bindtap="btnOpClick" style="background-color: {{bcA}};">{{item[2]}}</button>
+    <button id='B' class="btn_op" bindtap="btnOpClick" style="background-color: {{bcB}};" >{{item[3]}}</button>
+    <button id='C' class="btn_op" bindtap="btnOpClick" style="background-color: {{bcC}};" >{{item[4]}}</button>
+    <button id='D' class="btn_op" bindtap="btnOpClick" style="background-color: {{bcD}};" >{{item[5]}}</button>
+    <button id='E' class="btn_op" wx:if="{{item.length >= 7}}" bindtap="btnOpClick" style="background-color: {{bcE}};" >{{item[6]}}</button>
+    <button id='F' class="btn_op" wx:if="{{item.length >= 8}}" bindtap="btnOpClick" style="background-color: {{bcF}};" >{{item[7]}}</button>
+  </scroll-view>
+  <view class="page_bottom">
+    <view class="page_bottom_left" bindtap="showRight">卐</view>
+    <picker value="{{index}}" range="{{pickerMsg}}" bindchange="bindPickerChange">
+      <view class="page_bottom_msg">{{index+1}}/{{tishu}}</view>
+    </picker>
+    <view class = "page_bottom_star" bindtap="changeStar">{{star}}</view>
+    <view class="page_bottom_last" bindtap="lastQuestion" >◁</view>
+    <view class="page_bottom_next" bindtap="nextQuestion" >▷</view>
+  </view>
+</view>

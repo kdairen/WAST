@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/introduce/introduce",
+    "pages/lib/libs/libs",
+    "pages/lib/addLib/addLib",
+    "pages/sub/subs/subs",    
+    "pages/sub/addSub/addSub",
+    "pages/main/single/single",
+    "pages/main/single1/single1",
+    "pages/main/multiple/multiple",
+    "pages/main/multiple1/multiple1",
+    "pages/main/judge/judge",
+    "pages/main/judge1/judge1",
+    "pages/main/result/result"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "我爱刷题",
+    "navigationBarTextStyle":"white"
+  }
+}

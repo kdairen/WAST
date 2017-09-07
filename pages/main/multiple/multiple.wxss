@@ -1,0 +1,8 @@
+/* pages/main/multiple/multiple.wxss */
+
+.lbl_title {
+  text-align: left;
+  margin-top: 10rpx;
+  line-height: 50rpx;
+  font-size: 40rpx;
+}

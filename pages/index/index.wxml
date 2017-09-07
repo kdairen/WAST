@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="logoinfo">
+    <image class="logo-avatar" src="/image/logo.png" background-size="cover"></image>
+    <text class="logo-nickname">我爱刷题</text>
+  </view>
+  <view class="usermotto">
+    <button  bindtap="btnStart" >开始学习</button>
+    <button style="margin-top: 30px;" bindtap="btnIntroduce">使用说明</button>   
+  </view>
+</view>

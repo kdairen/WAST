@@ -1,0 +1,24 @@
+<!--pages/main/judge1/judge1.wxml-->
+<view class="page">
+  <scroll-view scroll-y style="height:{{titleHeight}}px;">
+    <label class="page_title">{{item[1]}}</label>
+  </scroll-view>
+  <view style="background-color:#000; height:1px"></view>
+  <view class="page_line" style="height:{{opsHeight}}px">
+    <view class="line1" style="height:{{opsHeight}}px"></view>
+    <view class="line2" style="height:{{opsHeight}}px"></view>
+  </view>
+  <view class="page_op">
+    <button class="btn_op" id='T' bindtap="btnOpClick" style="background-color: {{bcT}};" plain="true">✔</button>
+    <button class="btn_op" id='F' bindtap="btnOpClick" style="background-color: {{bcF}};" plain="true">✘</button>
+  </view>
+  <view class="page_bottom">
+    <view class="page_bottom_left" bindtap="submit">批</view>
+    <picker value="{{index}}" range="{{pickerMsg}}" bindchange="bindPickerChange">
+      <view class="page_bottom_msg">{{index+1}}/{{tishu}}</view>
+    </picker>
+    <view class = "page_bottom_star" bindtap="changeStar">{{star}}</view>
+    <view class="page_bottom_last" bindtap="lastQuestion" >◁</view>
+    <view class="page_bottom_next" bindtap="nextQuestion" >▷</view>
+  </view>
+</view>

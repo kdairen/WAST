@@ -1,0 +1,11 @@
+<!--pages/main/result/result.wxml-->
+<view class="page">
+  <view class="top">
+  <view class="top_msg">题数:{{total}} 完成:{{done}} 做错:{{wrongNum}}</view>
+  <view class="top_time">用时:{{time}}</view>
+  </view>
+  <button class="btn_practice" bindtap="practice">练习错题</button>
+  <scroll-view scroll-y style=" position: absolute; top: 70px; height:{{windowHeight - 70}}px;">
+    <text>{{wrongText}}</text>
+  </scroll-view>
+</view>

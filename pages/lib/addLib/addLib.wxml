@@ -1,0 +1,12 @@
+<!--pages/lib/addLib/addLib.wxml-->
+<view class="page">
+  <view class="top">
+    <view class="top_name">输入名称：</view>
+    <button class="top_input"  style="border-color: #fff;"  plain="true">
+      <input style="margin-top:4px; color:#fff" id="myInput" maxlength="17" bindinput="getName" />
+    </button>
+  </view>
+  <button  bindtap="modalTap0" style="margin-top:30rpx;">确认</button>
+  <button style="margin-top:40rpx;" bindlongtap="modalTap1">长按恢复默认题库</button>
+  <modal title="{{modalTitle}}" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="modalFirm" bindcancel="modalCancel" bindlongtap="longtap">{{modalMsg}}</modal>
+</view>
